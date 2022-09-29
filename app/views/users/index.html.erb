@@ -1,0 +1,11 @@
+<h2>Login</h2>
+<%= form_with url: "users/1", method: :get do |f| %>
+  <%= f.label :rut, "RUT" %><br>
+  <%= f.text_field :rut %><br>
+  <%= f.label :password, "Contraseña" %><br>
+  <%= f.password_field :password %><br>
+
+  <%= f.submit "Ingresar" %>
+  <%= f.submit "Ingresar con Clave Única" %>
+<% end %>
+

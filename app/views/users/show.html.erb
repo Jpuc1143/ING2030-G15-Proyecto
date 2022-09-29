@@ -1,0 +1,12 @@
+<h2>Datos del Paciente</h2>
+<img src="/avatar_default.png" width="128" height="128"></img>
+<ul>
+  <li>Nombres: <%= @user.fname %></li>
+  <li>Apellidos: <%= @user.lname %></li>
+  <li>Fecha de Nacimiento: <%= @user.dob %></li>
+</ul>
+
+<h2>Recomendaciones</h2>
+
+<h2>Examenes</h2>
+<%= render partial: "exams/exam", collection: @exams %>
