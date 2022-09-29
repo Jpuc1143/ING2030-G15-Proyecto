@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_29_004557) do
+ActiveRecord::Schema.define(version: 2022_09_29_141548) do
 
   create_table "exams", force: :cascade do |t|
     t.string "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_09_29_004557) do
     t.string "email"
     t.string "fname"
     t.string "lname"
-    t.string "dob"
+    t.datetime "dob"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

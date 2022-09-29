@@ -4,9 +4,16 @@
   <li>Nombres: <%= @user.fname %></li>
   <li>Apellidos: <%= @user.lname %></li>
   <li>Fecha de Nacimiento: <%= @user.dob %></li>
+  <li>Edad: <%= ((Time.zone.now - @user.dob)/3600/24/365.24).floor() %></li>
 </ul>
 
 <h2>Recomendaciones</h2>
+<ul>
+  <li>Su última consulta general fue hace más de 6 meses. Se recomienda agendar una lo más pronto posible.</li>
+  <li>Su nivel de presión promedio lo pone en el area de riesgo para enfermedades cardiovasculares. Se recomienda agendar examanes para el corazón.</li>
+  
+</ul>
+<button>Análisis Avanzado</button>
 
-<h2>Examenes</h2>
+<h2>Exámenes</h2>
 <%= render partial: "exams/exam", collection: @exams %>
