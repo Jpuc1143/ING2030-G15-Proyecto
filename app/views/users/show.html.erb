@@ -1,5 +1,5 @@
 <h2>Datos del Paciente</h2>
-<img src="/avatar_default.png" width="128" height="128"></img>
+<img src="/avatar_default.png" width="128" height="128"></img><br><br>
 <ul>
   <li>Nombres: <%= @user.fname %></li>
   <li>Apellidos: <%= @user.lname %></li>
@@ -7,13 +7,5 @@
   <li>Edad: 22</li>
 </ul>
 
-<h2>Recomendaciones</h2>
-<ul>
-  <li>Su última consulta general fue hace más de 6 meses. Se recomienda agendar una lo más pronto posible.</li>
-  <li>Su nivel de presión promedio lo pone en el área de riesgo para enfermedades cardiovasculares. Se recomienda agendar exámenes para el corazón.</li>
-  
-</ul>
-<button>Análisis Avanzado</button>
+<%= link_to "Ver mis predispociones a tener alguna enfermedad crónica", "/surveys" %>
 
-<h2>Exámenes</h2>
-<%= render partial: "exams/exam", collection: @exams %>
