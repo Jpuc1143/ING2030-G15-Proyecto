@@ -24,14 +24,16 @@ function switchSurveyPage(current, next) {
 }
 
 window.onload = () => {
-	console.log(document.forms)
+	let hasSymptoms = false;
+
 	document.getElementById("riskGroupSubmit").addEventListener("click", e => {
+		const page = document.getElementById("riskGroup");
 		const height = parseInt(document.getElementById("height_1").value) + parseInt(document.getElementById("height_2").value)/100;
 		const mass = document.getElementById("mass").value;
 		const bmi = mass / (height^2)
 		console.log("BMI", bmi)
 		const over45 = document.getElementById("older_than_45").checked;
-		const anyChecked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+		const anyChecked = Array.from(page.querySelectorAll('input[type="checkbox"]'))
 			.reduce((acc, element) => acc || element.checked, false);
 
 		if (over45 || (anyChecked && bmi >= 25)) {
@@ -41,20 +43,24 @@ window.onload = () => {
 		}
 	});
 
-	document.getElementById("symptomsSubmit").addEventListener("submit", e => {
-		if (reduce) {
-			switchSurveyPage("symptoms", "glucoseTest");
-		} else {
-			switchSurveyPage("symptoms", "glucoseTestFasting");
-		}
+	document.getElementById("symptomsSubmit").addEventListener("click", e => {
+		const page = document.getElementById("symptoms");
+		const anyChecked = Array.from(page.querySelectorAll('input[type="checkbox"]'))
+			.reduce((acc, element) => acc || element.checked, false);
+
+		hasSymptoms = anyChecked;
+		switchSurveyPage("symptoms", "glucoseTest");
 	});
 
-	document.getElementById("glucoseTestSubmit").addEventListener("submit", e => {
-		const form = e.target;
-		if (form) {
-			switchSurveyPage("riskGroup", "atRisk");
+	document.getElementById("glucoseTestSubmit").addEventListener("click", e => {
+		const page = document.getElementById("symptoms");
+		
+		const glucose = parseInt(page.getElementById("glucoseMeasurement").value);
+
+		if ((hasSymptoms && glucose >= 200) || (!hasSymptoms && glucose >= 100)) {
+			switchSurveyPage("glucoseTest", "atRisk");
 		} else {
-			switchSurveyPage("riskGroup", "healthy");
+			switchSurveyPage("glucoseTest", "healthy");
 		}
 	});
 }
