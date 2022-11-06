@@ -1,38 +1,37 @@
 <h2>Ingresa tus datos</h2>
 
-<form>
-<label>Seleccione su edad</label><br>
-  <input type="radio" id="older_than_45" name="age_1" value="older_than_45">
-  <label for="older_than_45">Mayor o igual a 45 años</label><br>
-  <input type="radio" id="younger_than_45" name="age_2" value="younger_than_45">
-  <label for="younger_than_45">Menor a 45 años</label><br><br>
+<div id="riskGroupPage">
+  <form name="riskGroup">
+    <label>Ingrese su peso</label><br>
+    <input type="number" id="weight" name="weight" placeholder="70">
+    <label>kg.</label><br><br>
 
-  <label>Ingrese su peso</label><br>
-  <input type="number" id="weight" name="weight" placeholder="70">
-  <label>kg.</label><br><br>
+    <label>Ingrese su altura</label><br>
+    <input type="number" id="height_1" name="height_1" placeholder="1">
+    <label>,</label>
+    <input type="number" id="height_2" name="height_2" placeholder="64">
+    <label>metros</label><br><br>
 
-  <label>Ingrese su altura</label><br>
-  <input type="number" id="height_1" name="height_1" placeholder="1">
-  <label>,</label>
-  <input type="number" id="height_2" name="height_2" placeholder="64">
-  <label>metros</label><br><br>
+    <label>Seleccione las casillas en caso de cumplirlas</label><br>
+    <input type="checkbox" id="cb" value="diabetes">
+    <label for="cb"> Soy mayor de 45 años</label><br>
 
-  <label>Seleccione las casillas en caso de cumplirlas</label><br>
-  <input type="checkbox" id="cb1" value="diabetes">
-  <label for="cb1"> Poseo un pariente de primer grado diabéticos (padres, hermanos) </label><br>
-  <input type="checkbox" id="cb2" value="diabetes">
-  <label for="cb2"> Estuve embarazada con algún hijo macrosómico (que pesó 4 kg. o más al momento de nacer) o tuve diabetes gestacional </label><br>
-  <input type="checkbox" id="cb3" value="diabetes">
-  <label for="cb3"> Vivo una estilo de vida sedentario (menos de 30 minutos diarios de ejercicio regular y menos de 3 días a la semana) </label><br>
-  <input type="checkbox" id="cb4" value="diabetes">
-  <label for="cb4"> Soy hipertenso (mayor o igual a 140/90 mmHg)  </label><br>
-  <input type="checkbox" id="cb5" value="diabetes">
-  <label for="cb5"> Tengo el colesterol "bueno" (HDL) menor o igual a 35 (mg/dl) y/o los triglicéridos mayor o igual a 250 (mg/dl) </label><br>
-  <input type="checkbox" id="cb6" value="diabetes">
-  <label for="cb6"> Estados de insulino resistencia (síndrome de ovario poliquístico, acantosis nigricans) </label><br>
-  <input type="checkbox" id="cb7" value="diabetes">
-  <label for="cb7"> He tenido alguna enfermedad cardiovascular </label><br>
+    <input type="checkbox" id="cb1" value="diabetes">
+    <label for="cb1"> Poseo un pariente de primer grado diabéticos (padres, hermanos) </label><br>
+    <input type="checkbox" id="cb2" value="diabetes">
+    <label for="cb2"> Estuve embarazada con algún hijo macrosómico (que pesó 4 kg. o más al momento de nacer) o tuve diabetes gestacional </label><br>
+    <input type="checkbox" id="cb3" value="diabetes">
+    <label for="cb3"> Vivo una estilo de vida sedentario (menos de 30 minutos diarios de ejercicio regular y menos de 3 días a la semana) </label><br>
+    <input type="checkbox" id="cb4" value="diabetes">
+    <label for="cb4"> Soy hipertenso (mayor o igual a 140/90 mmHg)  </label><br>
+    <input type="checkbox" id="cb5" value="diabetes">
+    <label for="cb5"> Tengo el colesterol "bueno" (HDL) menor o igual a 35 (mg/dl) y/o los triglicéridos mayor o igual a 250 (mg/dl) </label><br>
+    <input type="checkbox" id="cb6" value="diabetes">
+    <label for="cb6"> Estados de insulino resistencia (síndrome de ovario poliquístico, acantosis nigricans) </label><br>
+    <input type="checkbox" id="cb7" value="diabetes">
+    <label for="cb7"> He tenido alguna enfermedad cardiovascular </label><br>
 
-  <br><input type="submit" value="Enviar">
+    <br><input type="submit" value="Enviar">
 
-</form>
+  </form>
+</div>
