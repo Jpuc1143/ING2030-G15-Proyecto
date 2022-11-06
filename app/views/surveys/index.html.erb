@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Encuestas de Medicina Preventiva</h1>
+<h3>Encuestas de Medicina Preventiva</h3>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= survey.name %></td>
         <td><%= survey.description %></td>
-        <td><%= link_to 'Realizar', survey %></td>
+        <td><%= link_to 'Realizar', survey , :class => "btn btn-outline-success"%></td>
       </tr>
     <% end %>
   </tbody>

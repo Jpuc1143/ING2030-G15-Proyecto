@@ -1,14 +1,13 @@
-<h2>Login</h2>
+<h3>Ingresa con tu rut y contraseña</h3>
 <%= form_with url: "/users/1", method: :get do |f| %>
   <%= f.label :rut, "RUT" %><br>
-  <%= f.text_field :rut %><br>
+  <%= f.text_field :rut %><br><br>
   <%= f.label :password, "Contraseña" %><br>
-  <%= f.password_field :password %><br>
+  <%= f.password_field :password %><br><br>
 
   <%= f.submit "Ingresar" %>
-  <%= f.submit "Ingresar con Clave Única" %>
+  <%= link_to "Hacer encuesta anónimamente", "/surveys", :class => "btn" %>
 <% end %>
-
 <br>
 <div class="alert alert-danger m-5">
   <p>Prevy ofrece la siguiente información como una recomendación y no es avalado por expertos. Prevy no se responsabiliza por cualquier mal uso de esta aplicación.</p>
