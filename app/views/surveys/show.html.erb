@@ -1,9 +1,14 @@
 <h2>Ingresa tus datos</h2>
 
-<div id="riskGroupPage">
-  <form name="riskGroup">
+<div id="riskGroup">
+    <label>Seleccione su edad</label><br>
+    <input type="radio" id="older_than_45" name="age_1" value="older_than_45">
+    <label for="older_than_45">Mayor o igual a 45 años</label><br>
+    <input type="radio" id="younger_than_45" name="age_2" value="younger_than_45">
+    <label for="younger_than_45">Menor a 45 años</label><br><br>
+
     <label>Ingrese su peso</label><br>
-    <input type="number" id="weight" name="weight" placeholder="70">
+    <input type="number" id="mass" name="mass" placeholder="70">
     <label>kg.</label><br><br>
 
     <label>Ingrese su altura</label><br>
@@ -13,9 +18,6 @@
     <label>metros</label><br><br>
 
     <label>Seleccione las casillas en caso de cumplirlas</label><br>
-    <input type="checkbox" id="cb" value="diabetes">
-    <label for="cb"> Soy mayor de 45 años</label><br>
-
     <input type="checkbox" id="cb1" value="diabetes">
     <label for="cb1"> Poseo un pariente de primer grado diabéticos (padres, hermanos) </label><br>
     <input type="checkbox" id="cb2" value="diabetes">
@@ -31,7 +33,24 @@
     <input type="checkbox" id="cb7" value="diabetes">
     <label for="cb7"> He tenido alguna enfermedad cardiovascular </label><br>
 
-    <br><input type="submit" value="Enviar">
+    <br><input type="submit" value="Enviar" id="riskGroupSubmit">
+</div>
 
-  </form>
+<div id="symptoms" hidden>
+    <br><input type="submit" value="Enviar" id="symptomsSubmit">
+
+</div>
+
+<div id="glucoseTest" hidden>
+    <br><input type="submit" value="Enviar" id="glucoseTestSubmit">
+
+</div>
+
+<div id="healthy" hidden>
+  Ústed no tiene un riesgo significativo de tener diabetes tipo 2.
+</div>
+
+<div id="atRisk" hidden>
+  Ústed tiene un riesgo significativo de tener diabetes tipo 2. Se recomienda ir a un
+  centro medico a examinarse.
 </div>
