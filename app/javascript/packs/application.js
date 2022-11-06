@@ -53,9 +53,8 @@ window.onload = () => {
 	});
 
 	document.getElementById("glucoseTestSubmit").addEventListener("click", e => {
-		const page = document.getElementById("symptoms");
-		
-		const glucose = parseInt(page.getElementById("glucoseMeasurement").value);
+		const page = document.getElementById("glucoseTest");
+		const glucose = parseInt(document.getElementById("glucoseMeasurement").value);
 
 		if ((hasSymptoms && glucose >= 200) || (!hasSymptoms && glucose >= 100)) {
 			switchSurveyPage("glucoseTest", "atRisk");
